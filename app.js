@@ -29,8 +29,9 @@ function sortearAmigo() {
     if (amigos.length != 0) {
         let index = Math.floor(Math.random() * amigos.length);
         let amigoElegido = amigos[index];
-        resultado.innerHTML = `El amigo secreto es ${amigoElegido}`;
-    }else{
+        resultado.innerHTML = `El amigo secreto seleccionado es: ${amigoElegido}`;
+        limpiarLista();
+    } else {
         alert("Por favor, inserte nombre de amigos a la lista.");
     }
 
@@ -40,3 +41,7 @@ function limpiarInput() {
     document.getElementById("amigo").value = "";
 }
 
+function limpiarLista(){
+    amigos = [];
+    listaAmigos.innerHTML = "";
+}
